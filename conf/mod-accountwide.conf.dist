@@ -1,0 +1,13 @@
+[worldserver]
+
+########################################
+# Accountwide Currency Configuration
+########################################
+#
+#    AccountwideCurrency.Enable
+#        Description: Enable the module and make currencies shared accountwide
+#        Default:     0 - Disabled
+#                     1 - Enabled
+#
+
+AccountwideCurrency.Enable = 1
