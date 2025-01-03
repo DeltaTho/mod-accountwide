@@ -127,11 +127,6 @@ public:
         SyncCurrencyOnLogin(player, accountId);
     }
 
-    //void OnLogout(Player* player) //override
-    //{
-    //    MatchSavedData(player);
-    //}
-
     void OnSave(Player* player) //override
     {
         MatchSavedData(player);
@@ -144,7 +139,6 @@ public:
     void MatchSavedData(Player* player) {
         uint32 accountId = player->GetSession()->GetAccountId();
         for (uint32 currencyId : currencyItemIDs) {
-            std::cout << "Currency ID: " << currencyId << std::endl;
 
             uint32 accountCurrencyCount = FetchAccountCurrency(accountId, currencyId);
             uint32 playerCurrencyCount = 0;
@@ -196,7 +190,6 @@ public:
     /// <param name="accountId"></param>
     void SyncCurrencyOnLogin(Player* player, uint32 accountId) {
         for (uint32 currencyId : currencyItemIDs) {
-            std::cout << "Currency ID: " << currencyId << std::endl;
 
             uint32 accountCurrencyCount = FetchAccountCurrency(accountId, currencyId);
             uint32 playerCurrencyCount = 0;
